@@ -183,3 +183,182 @@ dataformats='HWC'
 ```
 writter.add_image("test",image_array,1,dataformats='HWC')
 ```
+
+
+
+
+
+## P9、Transforms的使用
+
+Transforms**结构及用法**
+
+![a1](../../../OneDrive - for personal/Desktop/a1.svg)
+
+<PIL.JpegImagePlugin.JpegImageFile image mode=RGB size=500x500 at 0x1B6FDFA9F98>
+
+
+
+```python
+from PIL import Image
+from torchvision import transforms
+
+# python的用法-》   tensor数据类型
+# 通过tensform.totensor去解决两个问题
+# 1.transforms该如何使用
+# 2.tensor数据类型相比其他数据类型有什么区别
+
+# 绝对路径 G:\workSpace\new_code\python_learing\deeplearning\dataResourse\practise\train\ants_image\20935278_9190345f6b.jpg
+# 相对路径 dataResourse/practise/train/ants_image/67270775_e9fdf77e9d.jpg
+
+img_path = 'dataResourse/practise/train/ants_image/67270775_e9fdf77e9d.jpg'
+img = Image.open(img_path)
+
+print(img)
+# 实例化对象，再调用，实现call方法， 再传进去参数    transforms不能传参
+tensor_trans=transforms.ToTensor()
+tensor_img=tensor_trans(img)#ctrl+p
+print(tensor_img)
+```
+
+![image-20210630214231104](pyTorch深度学习快速入门/image-20210630214231104.png)
+
+
+
+```tensorboard --logdir=logs
+tensorboard --logdir=logs
+```
+
+
+
+## p10、常见的Transfroms
+
+
+
+python中内置函数**==__call__==**的使用
+
+——call——：可以在实例化时传入参数，就自动运行call的方法
+
+其他类里面的方法。都需要再实例化之后再通过类.方法名来调用
+
+```python
+class Person():
+    def __call__(self, name):
+        print("__call__"+"hello"+name)
+
+    def hello(self,name):
+        print("hello"+name)
+
+person=Person()
+person("zhangsan")
+person.hello('lisi')
+```
+
+
+
+![image-20210701120610808](pyTorch深度学习快速入门/image-20210701120610808.png)
+
+
+
+
+
+### 1.Normalize归一化
+
+
+
+```python
+from PIL import Image
+from torch.utils.tensorboard import SummaryWriter
+from torchvision import transforms
+
+writer=SummaryWriter('logs')
+img=Image.open('image/img.png')
+print(img)
+
+trans_totensor=transforms.ToTensor()
+tensor_img=trans_totensor(img)
+writer.add_image('to_tensor',tensor_img)
+writer.close()
+
+#normalize
+print(tensor_img[0][0][0])
+trans_norm=transforms.Normalize([1,2,4],[4,5,1])
+img_norm=trans_norm(tensor_img)
+print(img_norm[0][0][0])
+writer.add_image('normalize',tensor_img,1)
+
+writer.close()
+```
+
+### 总结使用
+
+```python
+from PIL import Image
+from torch.utils.tensorboard import SummaryWriter
+from torchvision import transforms
+
+writer=SummaryWriter('logs')
+img=Image.open('image/img.png')
+print(img)#PIL
+
+trans_totensor=transforms.ToTensor()
+tensor_img=trans_totensor(img)#tensor
+writer.add_image('to_tensor',tensor_img)
+writer.close()
+
+#normalize
+print(tensor_img[0][0][0])
+trans_norm=transforms.Normalize([1,2,4],[4,5,1])
+img_norm=trans_norm(tensor_img)
+print(img_norm[0][0][0])
+writer.add_image('normalize',tensor_img,1)
+
+writer.close()
+
+
+#resize
+print(img.size)
+trans_resize=transforms.Resize((512,512))
+#img PIL —>reszie  img_size  PIL
+img_resize=trans_resize(img)
+#img_resize  PIL —> totensor _>img_resize  tensor
+img_resize=trans_totensor(img_resize)
+print(img_resize)
+
+writer.add_image('resize',img_resize,0)
+
+writer.close()
+
+# compose ()   resize_2
+trans_resize_2=transforms.Resize(512)
+trans_compose=transforms.Compose([trans_resize_2,trans_totensor])
+img_resize_2=trans_compose(img)
+writer.add_image('resize',img_resize_2,1)
+
+#randomCrop
+tran_random=transforms.RandomCrop(400)
+trans_compose_2=transforms.Compose([tran_random,trans_totensor])
+for i in range(10):
+    img_crop=trans_compose_2(img)
+    writer.add_image('randomcrop',img_crop,i)
+
+writer.close()
+```
+
+
+
+![image-20210701141625693](pyTorch深度学习快速入门/image-20210701141625693.png)
+
+
+
+
+
+## P14、torchvision的数据集的使用
+
+pytorch官网   https://pytorch.org/
+
+![image-20210701142545911](pyTorch深度学习快速入门/image-20210701142545911.png)
+
+通常使用**torchvision**
+
+![image-20210701142637612](pyTorch深度学习快速入门/image-20210701142637612.png)
+
