@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7d5d7114-91e0-4cc0-a2e3-4a6f219bc3d4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../python_learing/deeplearning/p15_dataloader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/java_learning.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/singleDemo/Hungry.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/单例模式.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625112708.LAPTOP-5G20B9I0.3160.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625114623.LAPTOP-5G20B9I0.16524.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625114623.LAPTOP-5G20B9I0.16524.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625114673.LAPTOP-5G20B9I0.23560.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625114673.LAPTOP-5G20B9I0.23560.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625114759.LAPTOP-5G20B9I0.3456.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625114759.LAPTOP-5G20B9I0.3456.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625118019.LAPTOP-5G20B9I0.7012.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625118019.LAPTOP-5G20B9I0.7012.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625118226.LAPTOP-5G20B9I0.18796.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625118226.LAPTOP-5G20B9I0.18796.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625118282.LAPTOP-5G20B9I0.22360.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625118282.LAPTOP-5G20B9I0.22360.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625118282.LAPTOP-5G20B9I0.22360.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625118650.LAPTOP-5G20B9I0.2568.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625118650.LAPTOP-5G20B9I0.2568.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625118650.LAPTOP-5G20B9I0.2568.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625118650.LAPTOP-5G20B9I0.2568.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625118693.LAPTOP-5G20B9I0.23472.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625118693.LAPTOP-5G20B9I0.23472.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625118693.LAPTOP-5G20B9I0.23472.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625118693.LAPTOP-5G20B9I0.23472.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625119655.LAPTOP-5G20B9I0.23072.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625119655.LAPTOP-5G20B9I0.23072.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625119656.LAPTOP-5G20B9I0.23072.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625119656.LAPTOP-5G20B9I0.23072.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625119674.LAPTOP-5G20B9I0.18896.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625119674.LAPTOP-5G20B9I0.18896.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625119675.LAPTOP-5G20B9I0.18896.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625119675.LAPTOP-5G20B9I0.18896.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625119694.LAPTOP-5G20B9I0.19012.0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625119694.LAPTOP-5G20B9I0.19012.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625119694.LAPTOP-5G20B9I0.19012.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/logs/events.out.tfevents.1625119694.LAPTOP-5G20B9I0.19012.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/deeplearning/p11_transforms_dataset.py" beforeDir="false" afterPath="$PROJECT_DIR$/../python_learing/deeplearning/p11_transforms_dataset.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../python_learing/pyTorch深度学习快速入门.md" beforeDir="false" afterPath="$PROJECT_DIR$/../python_learing/pyTorch深度学习快速入门.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1uiLzotkNn1pURxNFQU8XEQc5CK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/alog" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7d5d7114-91e0-4cc0-a2e3-4a6f219bc3d4" name="Default Changelist" comment="" />
+      <created>1625143728194</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1625143728194</updated>
+      <workItem from="1625143729406" duration="35000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
