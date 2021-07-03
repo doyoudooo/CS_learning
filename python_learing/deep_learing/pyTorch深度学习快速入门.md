@@ -715,10 +715,139 @@ parament参数：
 3. **padding** 边界填充否？
 4. **dilation**   表示kernel有无间隔
 5. **return_indices**
-6. **ceil_mode** 
+6. **ceil_mode** 选择用来保留还是放弃
 
 
 
 - The `floor()` function returns the <strong style="color:red;">largest</strong> integer less than or equal to a number.
 - The `ceil()` function returns the <strong style="color:red;">smallest</strong> integer greater than or equal to a number.
+
+![image-20210702153109050](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210702153109050.png)
+
+
+
+
+
+**==池化操作保留数据纹理，最大保留信息把==**
+
+
+
+
+
+## P20、非线性激活
+
+### ReLU
+
+Sigmoid
+
+![image-20210702164217496](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210702164217496.png)
+
+
+
+
+
+```python
+import torch
+import torchvision.datasets
+from torch import nn
+from torch.nn import ReLU, Sigmoid
+from torch.utils.data import DataLoader
+from torch.utils.tensorboard import SummaryWriter
+
+input=torch.tensor([[1,-0.2],
+                                [-1,3]])
+# 因为后面（）要用的格式不对，所以要转化鸭
+print(input.shape)
+input=torch.reshape(input,[-1,1,2,2])
+print(input.shape)
+
+
+dataset=torchvision.datasets.CIFAR10('../dataset',train=False,transform=torchvision.transforms.ToTensor(),
+                                     download=False)
+dataloader=DataLoader(dataset,batch_size=64)
+
+# 搭建神经网络
+class relu_cc(nn.Module):
+    def __init__(self):
+        super(relu_cc, self).__init__()
+        self.relu1=ReLU()
+    #     inplace=false,默认不替换原来的数据
+        self.sigmoid=Sigmoid()
+
+    def forward(self,input):
+        output=self.sigmoid(input)
+        return output
+
+relu_cc1=relu_cc()
+output=relu_cc1(input)
+print(relu_cc1)
+
+# relu对图像的处理并不明显，换一个展示
+writer=SummaryWriter('../logs_nonline')
+step=0
+for data in dataloader:
+    imgs,targets=data
+    writer.add_images('input',imgs,step)
+    output=relu_cc1(imgs)
+    writer.add_images('output',output,step)
+    step+=1
+
+writer.close()
+```
+
+![image-20210702165002438](C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20210702165002438.png)
+
+
+
+## P21、线性层  Linear Layers
+
+
+
+
+
+- ![image-20210702190142101](pyTorch深度学习快速入门/image-20210702190142101.png)
+
+
+
+
+
+![image-20210702191130366](pyTorch深度学习快速入门/image-20210702191130366.png)
+
+
+
+```python
+import torch
+import torchvision.datasets
+from torch import nn
+from torch.nn import Linear
+from torch.utils.data import DataLoader
+
+
+dataset = torchvision.datasets.CIFAR10('../dataset', train=False, transform=torchvision.transforms.ToTensor())
+dataloader = DataLoader(dataset, batch_size=64)
+
+class Tudui(nn.Module):
+
+    def __init__(self):
+        super(Tudui, self).__init__()
+        self.innear=Linear(196608 , 10)
+
+    def forward(self,input):
+        output=self.innear(input)
+        return  output
+
+
+tudui = Tudui()
+
+
+for data in dataloader:
+    imgs, targets = data
+    print(imgs.shape)
+    output = torch.flatten(imgs)
+    print(output.shape)
+    output = tudui(output)
+    print(output.shape)
+```
+
+
 
