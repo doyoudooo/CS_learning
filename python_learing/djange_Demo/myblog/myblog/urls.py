@@ -17,8 +17,15 @@ from django.contrib import admin
 from django.urls import path
 from home.views import index
 
+from home.views import *
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index,name='index'),
 #   ''中间不能有空格
+    path('article/kinds/<int:id>/',getArticleKindById),
+    path('article/detail/<int:id>/',getArticleDetail),
+    path('article/search/',getArticleByTitle),
+    path('about',about),
+
 ]

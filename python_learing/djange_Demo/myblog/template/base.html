@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>base</title>
+</head>
+<body>
+<div id="top"> 我的个人博客</div>
+<div id="content">
+
+    <div id="left">
+        {% block  content  %}
+
+        {% block article_list %}
+
+        {% endblock %}
+
+        {% endblock %}
+
+    </div>
+
+    <div id="right">
+        {% include 'home/kind.html' %}
+
+    </div>
+
+</div>
+
+<div id="bottem"></div>
+</body>
+</html>

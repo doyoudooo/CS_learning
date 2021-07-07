@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>searchResultList</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block article_list %}
+<div>
+    <h2>搜索结果</h2>
+    {% if not  article_list  %}
+    <p style="color: red">没查到相关结果！</p>
+    {% endif %}
+
+    <u1>
+        {% for article in article_list %}
+        <li><a href="/article/detial/{{ article.id }}"></a>
+            <br>作者:{{ article.auther }}<br>发表时间：{{ article.creat_time }}   </li>
+        <hr>
+        {% endfor %}
+
+    </u1>
+</div>
+
+{% endblock %}
+</body>
+</html>
