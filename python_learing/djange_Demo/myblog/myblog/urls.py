@@ -1,6 +1,6 @@
 """myblog URL Configuration
 
-The `urlpatterns` list routes URLs to views. For more information please see:
+The `urlpatterns`    list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
 Examples:
 Function views
@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from home.views import index
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',index,name='index'),
+#   ''中间不能有空格
 ]
