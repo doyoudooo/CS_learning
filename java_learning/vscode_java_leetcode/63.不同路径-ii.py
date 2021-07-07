@@ -18,3 +18,4 @@ if __name__ == '__main__':
     so1.uniquePathsWithObstacles([[0,1,0],[0,1,0],[0,0,0]])
 
 
+
