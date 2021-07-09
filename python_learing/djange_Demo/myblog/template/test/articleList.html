@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>articleList</title>
+</head>
+<body>
+<style type="text/css">
+  div{
+      border: 1px solid #000;
+      {#letter-spacing: 10px;#}
+      width: 200px;
+      height: 80px;
+
+  }
+  #div1 {
+      padding-top: 30px;
+      width: 1900px;
+  }
+
+#main{
+    width:1900px;
+    margin:0 auto;
+    overflow:hidden;
+    border: 1px solid #000;
+    height:1800px;
+
+
+}
+#main-left{
+    width:1300px;
+    height:1800px;
+    float:left;
+    border: 1px solid #000;
+    color: red;
+    background: #ffffff;
+}
+
+#main-right{
+    width:600px;
+    height:1800px;
+    float:right;
+    border: 1px solid #000;
+
+}
+
+</style>
+
+<h2 style="width: 1900px">我的个人博客</h2>
+
+<div id="div1">
+<a href="articleList.html" > 首页</a>
+    &emsp;
+<a href="../home/about.html" > 关于</a>
+</div>
+
+<div id="main">
+    <div id="main-left">
+<h1 ><b>文章列表</b></h1>
+    {% extends 'base.html' %}
+        {% block  content  %}
+
+        {% block article_list %}
+
+        {% endblock %}
+
+        {% endblock %}
+
+
+    </div>
+
+<div id="main-right">
+
+{% include 'home/kind.html' %}
+
+</div>
+</div>
+
+</body>
+</html>
+

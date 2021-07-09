@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>kind</title>
-</head>
-<body>
 <div>
-    <h2>分类</h2>
-    <u1>
-            <li><a href="/">全部</a> </li>
-        {% for kind in kinds %}
-                 <li><a href="/article/kinds/{{ kind.id }}">{{ kind.kinds }}</a> </li>
-        {% endfor %}
-
-    </u1>
+        <h2>分类</h2>
+        <ul>
+            <li><a href="/">全部</a></li>
+        {%for kind in kinds%}
+            <li><a href="/article/kinds/{{kind.id}}/">{{kind.kinds}}</a></li>
+        {%endfor%}
+        </ul>
 </div>
-</body>
-</html>

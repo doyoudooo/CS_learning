@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('title', models.CharField(default='', max_length=50)),
-                ('auther', models.CharField(blank=True, default='', max_length=50, null=True)),
+                ('author', models.CharField(blank=True, default='', max_length=50, null=True)),
                 ('content', models.TextField(default='')),
                 ('create_time', models.DateTimeField(auto_now_add=True)),
                 ('kind', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='home.article_kinds')),

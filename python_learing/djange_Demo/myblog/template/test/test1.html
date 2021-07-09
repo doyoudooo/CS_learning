@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>固定宽度两列布局</title>
+<style>
+*{margin:0;padding:0;}
+#herder{
+    height:50px;
+    background:blue;
+}
+#main{
+    width:960px;
+    margin:0 auto;
+    overflow:hidden;
+}
+#main .main-left{
+    width:288px;
+    height:800px;
+    background:red;
+    float:left;
+}
+#main .main-right{
+    width:672px;
+    height:800px;
+    background:pink;
+    float:right;
+}
+#footer{
+    width:960px;
+    height:50px;
+    background:gray;
+    margin:0 auto;
+}
+</style>
+</head>
+<body>
+<div id="herder">页头</div>
+<div id="main">
+    <div class="main-left">左列</div>
+    <div class="main-right">右列</div>
+</div>
+<div id="footer">页脚</div>
+</body>
+</html>

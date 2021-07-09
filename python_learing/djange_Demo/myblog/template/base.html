@@ -1,31 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>base</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我的博客</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+
+        }
+
+        #top {
+            height: 50px;
+            width: 100%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 20px;
+
+        }
+
+        #content {
+            width: 1000px;
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            margin-left: -500px;
+            margin-top: 80px;
+            min-height: 500px;
+            display: flex;
+            flex-direction: row;
+            box-sizing: border-box;
+        }
+
+        #left {
+            width: 75%;
+            margin-right: 10px;
+            border: 1px solid gray;
+        }
+
+        #right {
+            width: 25%;
+            border: 1px solid gray;
+
+        }
+        #search-box{
+            margin-top:10px;
+            text-align: center;
+        }
+        #menu{
+            width: 1000px;
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            margin-left: -500px;
+            border: 1px solid gray;
+            box-sizing: border-box;
+        }
+        #menu ul{
+            list-style: none;
+        }
+        #menu ul li{
+            display: block;
+            height: 50px;
+            width: 100px;
+            float: left;
+            line-height: 50px;
+            text-align: center;
+        }
+    </style>
 </head>
+
 <body>
-<div id="top"> 我的个人博客</div>
-<div id="content">
-
-    <div id="left">
-        {% block  content  %}
-
-        {% block article_list %}
-
-        {% endblock %}
-
-        {% endblock %}
-
+    <div id="top">我的个人博客
     </div>
-
-    <div id="right">
-        {% include 'home/kind.html' %}
-
+    <div id="menu">
+        <ul>
+            <li><a href="/">首页</a></li>
+            <li><a href="/about">关于</a></li>
+        </ul>
     </div>
+    <div id="content">
+        <div id="left">
+            {%block content%}
+            {%block article_list%}
+            {%endblock%}
+            {%endblock%}
+        </div>
+        <div id="right">
+            <div id="search-box">
+                <form action="/article/search/" method="GET">
+                    <input type="text" name="title">
+                    <button type="submit">搜索</button>
+                </form>
+            </div>
 
-</div>
 
-<div id="bottem"></div>
+            {%include 'home/kind.html'%}
+        </div>
+    </div>
+    <div id="bottom"></div>
 </body>
+
 </html>
+

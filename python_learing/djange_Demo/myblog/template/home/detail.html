@@ -1,18 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>detail</title>
-</head>
-<body>
-{% extends 'base.html' %}
-{% block content %}
-<h3>{{ articleObject.title }}</h3>
-作者：{{ articleObject.auther }}
-时间：{{ articleObject.create_time }}<hr><br>
-{{ articleObject.content }}
-{% endblock %}
+{%extends 'base.html'%}
+{%block content%}
+<h3>{{articleObject.title}}</h3>
+作者：{{articleObject.author}}
+时间：{{articleObject.create_time}}<hr><br>
+{{articleObject.content}}
 
 
-</body>
-</html>
+{%endblock%}
